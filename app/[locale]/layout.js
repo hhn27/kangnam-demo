@@ -5,6 +5,7 @@ import { Inter } from 'next/font/google'
 import { useLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
 import Script from 'next/script'
+import Footer from '@/components/general/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -26,7 +27,8 @@ export default function RootLayout({ children, params }) {
                 suppressHydrationWarning={true}
                 className={inter.className}
             >
-                <main>{children}</main>
+                <main>{children}
+                <Footer></Footer></main>
                 <Script
                     src='https://maps.vietmap.vn/sdk/vietmap-gl/1.15.3/vietmap-gl.js'
                     strategy='beforeInteractive'
